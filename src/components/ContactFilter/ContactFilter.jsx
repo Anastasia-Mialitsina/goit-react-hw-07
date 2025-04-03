@@ -1,0 +1,25 @@
+import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { selectNameFilter, setNameFilter } from "../../redux/filtersSlice"; 
+
+const ContactFilter = () => {
+  const dispatch = useDispatch();
+  const filter = useSelector(selectNameFilter); 
+
+  const handleChange = (e) => {
+    dispatch(setNameFilter(e.target.value)); 
+  };
+
+  return (
+    <div>
+      <input
+        type="text"
+        value={filter}
+        onChange={handleChange}
+        placeholder="Filter by name"
+      />
+    </div>
+  );
+};
+
+export default ContactFilter;
