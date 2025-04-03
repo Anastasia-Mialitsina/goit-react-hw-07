@@ -5,7 +5,7 @@ import {
   selectLoading,
   selectError,
 } from "../../redux/contactsSlice";
-
+import style from './ContactList.module.css';
 const ContactList = () => {
   const filteredContacts = useSelector(selectFilteredContacts); 
   const loading = useSelector(selectLoading);
@@ -17,7 +17,7 @@ const ContactList = () => {
   return (
     <ul>
       {filteredContacts.map((contact) => (
-        <li key={contact.id}>
+        <li key={contact.id} className={style.list}>
           {contact.name} - {contact.phone}
         </li>
       ))}

@@ -28,13 +28,21 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background-image: url('./img/f.jpg');
+  background-size: cover;  
+  background-position: center;
+  background-repeat: no-repeat; 
 }
 
 h1 {
-  font-size: 3.2em;
   line-height: 1.1;
+  font-size: 42px;
+  font-weight: bold;
+  text-align: center;
+  color: black;
+  text-shadow: 0 0 10px #eb0404, 0 0 20px #ad0404;
+  
 }
-
 button {
   border-radius: 8px;
   border: 1px solid transparent;
